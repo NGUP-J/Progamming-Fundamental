@@ -31,5 +31,6 @@ int main()
         num = first_digit * second_digit * third_digit;
         printf("%d . %d . %d = %d\n", third_digit, second_digit, first_digit, num);
     }
+    
     return 0;
 }

@@ -21,19 +21,10 @@ int main()
     while (multiply >= 10 || multiply < 0)
     {
 
-        // Get first digit
-        int first_digit = num[2];
-
-        // Get second digit
-        int second_digit = num[1];
-
-        // Get third digit
-        int third_digit = num[0];
-
         // Multiply all number
-        multiply = first_digit * second_digit * third_digit;
+        multiply = num[2] * num[1] * num[0];
 
-        printf("%i . %i . %i = %i\n", third_digit, second_digit, first_digit, multiply);
+        printf("%i . %i . %i = %i\n", num[2], num[1], num[0], multiply);
 
         // Initialize multiply to num
         int tmp1 = multiply;
