@@ -1,17 +1,13 @@
 #include <stdio.h>
-
+#include <math.h>
 int main()
 {
     float Weight, Height, BMI;
-
     printf("Enter Weight : ");
     scanf("%f", &Weight);
-    
     printf("Enter Height : ");
     scanf("%f", &Height);
-
-    BMI = Weight / ((Height * Height) * 0.0001);
-
+    BMI = Weight / (pow(Height, 2) * 0.0001);
     if (BMI >= 30)
     {
         printf("Obesity");
