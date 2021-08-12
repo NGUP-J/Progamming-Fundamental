@@ -7,7 +7,6 @@ int main()
     // Get user input
     printf("Input number : ");
     int num[INPUT_SIZE];
-
     int tmp = 0;
     do
     {
