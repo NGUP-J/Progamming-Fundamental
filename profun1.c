@@ -9,7 +9,11 @@ int main()
     int num[INPUT_SIZE];
 
     int tmp = 0;
-    scanf("%i", &tmp);
+    do
+    {
+        scanf("%d", &tmp);
+    }
+    while (tmp < 100 || tmp > 999);
 
     for (int i = 0; i < INPUT_SIZE; i++)
     {
