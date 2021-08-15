@@ -6,10 +6,10 @@ int main ()
     printf("Enter Number : ");
     scanf("%d", &h);
 
-    //loop top
+    //loop upper
     for (w = 1;w <= h - 1; w++)
     {
-        // wing top right
+        // wing upper right
         for (n = 1;n <= w; n++)
         {
             putchar('*');
@@ -20,7 +20,7 @@ int main ()
             putchar(' ');
         }
         putchar('\b');
-        // wing top left
+        // wing upper left
         for (n = w;n >= 1; n--)
         {
             putchar('*');
@@ -31,7 +31,7 @@ int main ()
     //loop down
     for (w = h;w >=1; w--)
     {
-        // wing down right
+        // wing lower right
         for (n = 1;n <= w; n++)
         {
             putchar('*');
@@ -42,7 +42,7 @@ int main ()
             putchar(' ');
         }
     putchar('\b');
-        // wing down left
+        // wing lower left
         for (n = w;n >= 1; n--)
         {
             putchar('*');
