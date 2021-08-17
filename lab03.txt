@@ -1,0 +1,154 @@
+ดิษฐพงษ์ จึงจีระสิทธิ์ 64011123
+1) 
+Draft Pseudo Code :
+ 	รับinput เก็บที่ตัวx;
+	หาผลบวกของเลขโดดที่ไม่ใช่0ทุกตัวที่ป้อนเข้าไป
+	outputออกมาเป็นจบเป็นเลยหลักเดียว
+Simple Command Pseudo Code :
+    กำหนดให้ n,b
+    แสดงผล Enter a number
+    รับinput เก็บไว้ใน n
+    loop ถ้า n >= 10
+        int sum = 0
+        loop ถ้า n > 0
+            m = n %(หารเศษ) 10   
+            sum = sum + m    
+            n= n / 10
+    n = sum
+    แสดงผล  -> n ออกมา
+c code :
+#include<stdio.h>  
+
+int main ()    
+{    
+    int n,m;    
+    printf("Enter a number : ");    
+    scanf("%d",&n);
+    //loop หา result
+    while (n >= 10)
+    {
+        int sum = 0;
+        //loop sum
+        while(n > 0)    
+        {    
+            m = n%10;    
+            sum += m;    
+            n = n/10;    
+        }
+    n = sum;    
+    printf(" -> %d", n);
+    }
+    return 0;  
+}   
+2)
+Draft Pseudo Code :
+ใส่่1-10000เข้าไป
+แสดงผลperfectnumberออกมา
+Simple Command Pseudo Code :
+    กำหนด num,rem,i
+    loop num = 1 ถ้า num <= 10000
+        int sum = 0
+        loop i = 1 ถ้า i < num
+            rem = num % i
+            ถ้า (rem = 0)
+                sum = sum + i
+            ถ้า (sum = num)
+                แสดงผล sum
+        i+1
+    num+1
+C code :
+#include <stdio.h>
+
+int main ()
+{
+    int num, rem, i;
+    for (num = 1;num <= 10000;num++)
+    {
+        int sum = 0;
+        for (i = 1; i < num; i++)
+        {
+            rem = num % i;
+            if (rem == 0)
+            {
+                sum += i;
+            }
+        }
+        if (sum == num)
+        {
+            printf(" %d ", sum);
+        }
+ 
+    }
+    return 0;
+}
+3)
+Draft Pseudo Code :
+รับinput เก็บที่ตัวx
+แสดงผลออกมาเป็น * เป็นรูปผีเสื้อ
+Simple Command Pseudo Code :
+รับinput เก็บที่ตัวx
+    กำหนดให้ i = 1
+    กำหนดให้ c1 = 1
+    กำหนดให้ c2 = 2 * n - 1
+
+    กำหนดให้ j = n + 1
+    กำหนดให้ b1 = n
+    กำหนดให้ b2 = n
+    loop int row = 1 ถ้า row <= (2 * n - 1)
+        loop int col = 1 ถ้า col <= (2 * n - 1)
+            ถ้า ((row == i และ col > c1 และ col < c2) หรือ (row == j และ col >= b1 และ col <= b2))
+                แสดงผล " "
+            ถ้าไม่ 
+                แสดงผล "*"
+        ถ้า (row < n)
+            i+1
+            c1+1
+            c2-1
+        ถ้าไม่ (row > n)
+            j+1
+            b1-1
+            b2+1
+        ขึ้นบรรทัดใหม่
+    row++
+C code :
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("input number : ");
+    scanf("%d", &n);
+    int i = 1;
+    int c1 = 1; // หลักที่ 1
+    int c2 = 2 * n - 1; 
+
+    int j = n + 1; 
+    int b1 = n;
+    int b2 = n; 
+    //loop แถว
+    for (int row = 1; row <= (2 * n - 1); row++)
+    {
+        //loop หลัก
+        for (int col = 1; col <= (2 * n - 1); col++)
+        {
+            if ((row == i && col > c1 && col < c2) || (row == j && col >= b1 && col <= b2)) // ใส่เว้นว่างเข้าไป
+                putchar(' ');
+            else
+                putchar('*');
+        }
+        if (row < n)
+        {
+            i++;
+            c1++;
+            c2--;
+        }
+        else if (row > n)
+        {
+            j++;
+            b1--;
+            b2++;
+        }
+        putchar('\n');
+    }
+    return 0;
+}
