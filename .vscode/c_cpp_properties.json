@@ -6,8 +6,8 @@
         "${workspaceFolder}/**"
       ],
       "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
-      "cStandard": "${default}",
-      "cppStandard": "${default}",
+      "cStandard": "gnu17",
+      "cppStandard": "gnu++20",
       "intelliSenseMode": "windows-gcc-x86",
       "compilerArgs": [
         "-Wall",
