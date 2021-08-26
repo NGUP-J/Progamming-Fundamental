@@ -2,29 +2,16 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "cppbuild",
-			"label": "C/C++: gcc.exe build active file",
-			"command": "C:\\MinGW\\bin\\gcc.exe",
-			"args": [
-				"-g",
-				"${file}",
-				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe",
-				"-Wall",
-				"-Wextra",
-				"-Wpedantic"
-			],
+			"type": "shell",
+			"label": "Run this C Program",
+			"command": "C:\\msys64\\mingw64\\bin\\gcc.exe -g3 -Wall \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" &&$\"{fileDirname}\\${fileBasenameNoExtension}.exe\"",
 			"options": {
-				"cwd": "${fileDirname}"
+				"cwd": "C:\\msys64\\minggw64\\bin"
 			},
 			"problemMatcher": [
 				"$gcc"
 			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"detail": "compiler: C:\\MinGW\\bin\\gcc.exe"
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\gcc.exe"
 		}
 	]
 }

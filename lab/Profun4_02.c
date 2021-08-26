@@ -3,25 +3,23 @@
 int main ()
 {
    char s[1000], r[1000];
-   int begin, end, count = 0;
-
-   printf("Input a string\n");
+   int x, e, n = 0;
+   // input string
+   printf("Input a string : ");
    gets(s);
+   // reverse string
+   while (s[n] != '\0')
+      n++;
 
-   // Calculating string length
+   e = n - 1;
 
-   while (s[count] != '\0')
-      count++;
-
-   end = count - 1;
-
-   for (begin = 0; begin < count; begin++) {
-      r[begin] = s[end];
-      end--;
+   for (x = 0; x < n; x++) {
+      r[x] = s[e];
+      e--;
    }
 
-   r[begin] = '\0';
-
+   r[x] = '\0';
+   // output reverse string
    printf("%s\n", r);
 
    return 0;
