@@ -1,0 +1,73 @@
+// C++ code
+//
+void setup()
+{
+}
+
+void loop()
+{
+  // LED1
+  pinMode(5, INPUT);
+  pinMode(6, OUTPUT);
+  digitalWrite(6, HIGH);
+  pinMode(7, OUTPUT); 
+  digitalWrite(7, LOW);
+  delay(500);
+  // LED2
+  digitalWrite(6, LOW);
+  digitalWrite(7, HIGH);
+  delay(500);
+  
+  // LED3
+  pinMode(5, OUTPUT);
+  digitalWrite(5, LOW);
+  pinMode(6, INPUT);
+  pinMode(7, OUTPUT);
+  digitalWrite(7, HIGH);
+  delay(500);
+  // LED4
+  digitalWrite(5, HIGH);
+  digitalWrite(7, LOW);
+  delay(500);
+  
+  // LED5
+  pinMode(5, OUTPUT);
+  digitalWrite(5, HIGH);
+  pinMode(6, OUTPUT);
+  digitalWrite(6, LOW);
+  pinMode(7, INPUT);
+  delay(500);
+  // LED6
+  digitalWrite(5, LOW);
+  digitalWrite(6, HIGH);
+  delay(500);
+  
+  // LED5
+  digitalWrite(5, HIGH);
+  digitalWrite(6, LOW);
+  delay(500);
+  
+  // LED4
+  pinMode(5, OUTPUT);
+  digitalWrite(5, HIGH);
+  pinMode(6, INPUT);
+  pinMode(7, OUTPUT);
+  digitalWrite(7, LOW);
+  delay(500);
+  // LED3
+  digitalWrite(5, LOW);
+  digitalWrite(7, HIGH);
+  delay(500);
+  
+  // LED2
+  pinMode(5, INPUT);
+  pinMode(6, OUTPUT);
+  digitalWrite(6, LOW);
+  pinMode(7, OUTPUT);
+  digitalWrite(7, HIGH);
+  delay(500);
+  // LED1
+  digitalWrite(6, HIGH);
+  digitalWrite(7, LOW);
+  
+}

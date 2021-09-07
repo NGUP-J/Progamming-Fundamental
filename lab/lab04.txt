@@ -15,9 +15,9 @@ void draw_ship(int x, int y)
 }
 
 void erase_ship(int x,int y)
+    printf("       ");
 {
     gotoxy(x,y);
-    printf("       ");
 }
 int main()
 {
