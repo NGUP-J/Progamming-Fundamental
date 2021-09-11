@@ -1,9 +1,11 @@
 #include <stdio.h>
 
+#define max 1
+
 int main()
 {
-    char ch,file_1[40],file_2[40];
-    FILE *input,*output;
+    char ch, file_1[max], file_2[max];
+    FILE *input, *output;
     printf("Input : ");
     gets(file_1);
 
@@ -19,13 +21,12 @@ int main()
 
     output = fopen(file_2, "w");
 
-    while ((ch = fgetc(input)) != EOF)
-        fputc(ch,output);
+    while (fread(file_1, sizeof(char), 1, input))
+        fwrite(file_1, sizeof(char), 1, fp2);
     printf("File copied successfully.\n");
 
-    fclose(input);
-    fclose(output);
+    fclose(fp1);
+    fclose(fp2);
 
     return 0;
 }
-// 
