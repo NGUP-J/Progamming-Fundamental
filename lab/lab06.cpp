@@ -150,5 +150,5 @@ char control(char ch)
     default:
         break;
     }
-    return tmp;
+    return 0;
 }
