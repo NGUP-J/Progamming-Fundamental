@@ -9,6 +9,7 @@ int main()
     int i, j,x,y,sizeofstr;
 
     printf("Input data string:\n");
+    
     for (i = 0;; i++) // input string until input = "."
     {
 
